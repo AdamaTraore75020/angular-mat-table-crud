@@ -18,33 +18,42 @@ import {EditDialogComponent} from './dialogs/edit/edit.dialog.component';
 import {DeleteDialogComponent} from './dialogs/delete/delete.dialog.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
+import { PersonFormDialogComponent } from './person-form-dialog/person-form-dialog.component';
+import { CdkTableModule } from '@angular/cdk/table';
+import { MatSelectModule } from '@angular/material/select';
+import { MatMenuModule } from '@angular/material/menu';
 
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        AddDialogComponent,
-        EditDialogComponent,
-        DeleteDialogComponent
-    ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        HttpClientModule,
-        MatDialogModule,
-        FormsModule,
-        MatButtonModule,
-        MatInputModule,
-        MatIconModule,
-        MatSortModule,
-        MatTableModule,
-        MatToolbarModule,
-        MatPaginatorModule,
-        ReactiveFormsModule
-    ],
-    providers: [
-        DataService
-    ],
-    bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    AddDialogComponent,
+    EditDialogComponent,
+    DeleteDialogComponent,
+    ConfirmationDialogComponent,
+    PersonFormDialogComponent,
+  ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+
+    CdkTableModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
+    MatDialogModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatSelectModule,
+    FormsModule,
+    MatToolbarModule
+  ],
+  providers: [DataService],
+  entryComponents: [ConfirmationDialogComponent, PersonFormDialogComponent],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
